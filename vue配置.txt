@@ -1,0 +1,35 @@
+1.node版本请更新到6.9.X版本以上,不然npm依赖会出问题
+
+2.命令行里运行npm install --global vue-cli
+
+3.npm install --global webpack
+
+安装的时候报了：
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\webpack\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.0.14: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+查了下是因为 fsevent是mac osx系统的，在win或者Linux下使用了 所以会有警告，忽略即可https://segmentfault.com/q/1010000004498934
+
+
+4.到你想建项目的地方打开命令行， vue init webpack-simple 【my-project-name】里面有一些选项，一路回车就可以了
+
+5.进入到文件夹里面 继续执行npm install
+
+6.安装 vue 路由模块 vue-router 和网络请求模块 vue-resource 
+
+npm install vue-router vue-resource --save
+
+
+
+还有一些别的模块:
+
+npm install vuex --save
+npm install style-loader --save-dev
+:
+npm install css-loader --save-dev
+:
+npm install file-loader --save-dev
+
+7.npm run dev
+
+浏览器弹出这样的页面就说明大功告成啦
